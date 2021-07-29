@@ -40,4 +40,4 @@ set cntrp lev incr 0,1.0
 #set cblabel "kcal/mol" norotate offset -4.5, 7 font ', 24'
 set linetype 1 lc rgb 'black' 
 #set border lw 1.5
-splot "free_energy_10" us 1:2:($3+5) lw 0.0 with pm3d
+splot "free_energy" us 1:2:3 lw 0.0 with pm3d
