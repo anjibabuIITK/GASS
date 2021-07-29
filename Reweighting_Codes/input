@@ -1,0 +1,7 @@
+300.d0  4.d0                 #Temp , Biasfactor
+1 1000001                    #tmin, tmax
+-3.14d0 3.14d0 0.10d0        #gridmin1, gridmax1, gridwith1
+-3.14d0 3.14d0 0.10d0        #gridmin2, gridmax2, gridwith2
+-3.14d0 3.14d0 0.10d0        #gridmin3, gridmax3, gridwith3
+-3.14d0 3.14d0 0.10d0        #gridmin4, gridmax4, gridwith4
+10 500                       #STRIDE, PACE
