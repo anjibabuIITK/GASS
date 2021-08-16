@@ -1,0 +1,15 @@
+#set up two variables for Phi and Psi dihedral angles 
+phi1: TORSION ATOMS=5,7,9,15
+psi1: TORSION ATOMS=7,9,15,17
+phi2: TORSION ATOMS=15,17,19,25
+psi2: TORSION ATOMS=17,19,25,27
+#-----------------------------------------------------------------#
+## Impose an umbrella potential on CV 1
+restraint-phi1: RESTRAINT ARG=phi2 KAPPA=500 AT=0.0
+#-----------------------------------------------------------------#
+## Well-tempered metadynamics is activated,
+metad: METAD ARG=phi1 PACE=500 HEIGHT=2.4 SIGMA=0.05 FILE=HILLS BIASFACTOR=4.0 TEMP=300.0
+#-----------------------------------------------------------------#
+## monitor the auxiliary variables
+PRINT STRIDE=10 ARG=phi2,phi1,psi1,psi2, FILE=COLVAR
+#
